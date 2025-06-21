@@ -1,5 +1,7 @@
+import Hero from "../components/Hero";
+
 function Home() {
-  return <h1>Lua Clara</h1>;
+  return <Hero />;
 }
 
 export default Home;
