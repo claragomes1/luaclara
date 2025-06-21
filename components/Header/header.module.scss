@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0e4;
+  padding: 0 50px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-left: 1rem;
+  }
+
+  &__link {
+    padding-left: 1rem;
+    color: #156f6e;
+  }
+
+  &__link:hover {
+    color: #2e2e2e;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+}
