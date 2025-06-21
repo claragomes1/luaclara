@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./header.module.scss";
+import styles from "./Header.module.scss";
 
-export default function Header() {
+function Header() {
   return (
     <header className={styles.header}>
       <Image src="/logo_luaclara.png" height={150} width={150}></Image>
@@ -33,3 +33,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
