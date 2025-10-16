@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f0e4;
-  padding: 0 50px;
+  position: absolute;
+  width: 100%;
+  padding: 16px 150px 16px 150px;
 
   &__list {
     display: flex;
@@ -15,11 +16,18 @@
 
   &__link {
     padding-left: 1rem;
-    color: #166d6d;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
   }
 
   &__link:hover {
-    color: #2e2e2e;
+    color: #1a7f7f;
+    text-shadow: 0 2px 8px rgba(22, 109, 109, 0.5);
   }
 }
 

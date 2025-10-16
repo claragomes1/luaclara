@@ -1,32 +1,26 @@
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./Header.module.scss";
+import Image from 'next/image';
+import styles from './Header.module.scss';
 
 function Header() {
   return (
     <header className={styles.header}>
-      <Image src="/logo_luaclara.png" height={150} width={150}></Image>
+      <Image src="/logo_luaclara_nova.png" height={110} width={110}></Image>
       <nav className={styles.header__nav}>
         <ul className={styles.header__list}>
           <li className={styles.header__item}>
-            <Link className={styles.header__link} href="#">
-              Home
-            </Link>
+            <a className={styles.header__link} href="#dayuse">
+              Day Use
+            </a>
           </li>
           <li className={styles.header__item}>
-            <Link className={styles.header__link} href="#galery">
-              Fotos
-            </Link>
+            <a className={styles.header__link} href="#about">
+              Sobre nós
+            </a>
           </li>
           <li className={styles.header__item}>
-            <Link className={styles.header__link} href="#day-use">
-              Ingressos
-            </Link>
-          </li>
-          <li className={styles.header__item}>
-            <Link className={styles.header__link} href="#location">
+            <a className={styles.header__link} href="#location">
               Como Chegar
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

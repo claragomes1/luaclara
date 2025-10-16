@@ -1,20 +1,20 @@
-import styles from "./Location.module.scss";
+import styles from './Location.module.scss';
 
 export default function Location() {
   return (
-    <div className={styles.location}>
+    <div id="location" className={styles.location}>
       <div className={styles.location__container}>
         <h1 className={styles.location__title}>
-          📍 Como chegar no Espaço Lua Clara
+          📍 Como chegar no Vale do Vento - Espaço Lua Clara
         </h1>
         <div className={styles.location__map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6100.943605194693!2d-43.62882903190814!3d-19.432448368976733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa5e90048ed1aeb%3A0xb6eae8bbcfe9a830!2sLUA%20CLARA!5e0!3m2!1spt-BR!2sbr!4v1750525450274!5m2!1spt-BR!2sbr"
             width="900"
             height="450"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className={styles.location__instructions}>
