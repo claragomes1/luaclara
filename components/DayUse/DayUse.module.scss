@@ -1,0 +1,141 @@
+.dayuse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f5f0e4;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 64px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #166d6d;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    max-width: 850px;
+    color: #166d6d;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__infos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__info_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 32px;
+    gap: 8px;
+    min-width: 220px;
+
+    background-color: #ffffff;
+    border: 1px solid #d6d2c4;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(22, 109, 109, 0.08);
+  }
+
+  &__info_title {
+    font-size: 1.25rem;
+    color: #166d6d;
+  }
+
+  &__info_text {
+    font-size: 1rem;
+    color: #03200b;
+  }
+
+  &__instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__instruction_item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(22, 109, 109, 0.08);
+    background-color: #ffffff;
+    padding: 24px 32px;
+  }
+
+  .included {
+    border: 2px solid #94c1b4;
+  }
+
+  .not_included {
+    border: 2px solid #e3a8a8;
+  }
+
+  &__instruction_title {
+    color: #166d6d;
+    font-size: 1.25rem;
+    padding-bottom: 16px;
+  }
+
+  &__instruction_text {
+    font-size: 1rem;
+    color: #03200b;
+    padding-bottom: 8px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  &__contact_title {
+    font-size: 2rem;
+    color: #166d6d;
+  }
+
+  &__contact_button {
+    font-size: 1.25rem;
+    color: #ffffff;
+    background-color: #166d6d;
+
+    padding: 12px 24px;
+    border-radius: 22px;
+    text-decoration: none;
+    border: 2px solid #166d6d;
+    transition: background-color 0.3s;
+
+    &:hover {
+      color: #166d6d;
+      background-color: #ffffff;
+    }
+  }
+
+  &__contact_text {
+    font-size: 1.5rem;
+
+    color: #166d6d;
+  }
+}
