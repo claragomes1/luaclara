@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styles from "./WhatsappWidget.module.scss";
+import Image from 'next/image';
+import styles from './WhatsappWidget.module.scss';
 
 function WhatsappWidget() {
   return (
@@ -14,7 +14,7 @@ function WhatsappWidget() {
           src="/icon_wpp.png"
           height={50}
           width={50}
-          alt={"WhatsApp"}
+          alt={'WhatsApp'}
         ></Image>
       </a>
     </div>

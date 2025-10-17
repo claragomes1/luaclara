@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const images = [
-  '/img1.JPG',
+  '/img1.jpg',
   '/img2.jpg',
-  '/img3.PNG',
+  '/img3.png',
   '/img4.jpg',
   '/img5.jpg',
   '/img6.jpg',
