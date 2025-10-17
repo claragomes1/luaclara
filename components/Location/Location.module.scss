@@ -11,21 +11,40 @@
     padding: 32px;
     background-color: #166d6d;
     border-radius: 88px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 16px;
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #f5f0e4;
+    margin-bottom: 24px;
+    text-align: center;
   }
 
-  &__map iframe {
-    border-radius: 16px;
+  &__map {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    aspect-ratio: 16 / 9;
+    background: #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
   }
 
   &__instructions {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 24px;
   }
 
   &__instructions_item {
@@ -33,6 +52,7 @@
     width: 800px;
     border-radius: 16px;
     padding: 14px;
+    flex: 1;
   }
 
   &__instructions_item_title {
@@ -42,5 +62,118 @@
 
   &__instructions_item_text {
     color: #166d6d;
+  }
+}
+
+@media (max-width: 1550px) {
+  .location {
+    padding: 16px 80px 48px;
+
+    &__container {
+      padding: 24px;
+      border-radius: 64px;
+    }
+
+    &__title {
+      font-size: 34px;
+    }
+
+    &__instructions_item {
+      width: 600px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .location {
+    padding: 16px 40px 40px;
+
+    &__container {
+      gap: 0px;
+      padding: 20px;
+      border-radius: 48px;
+    }
+
+    &__map {
+      margin: 0px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__instructions {
+      gap: 12px;
+      padding: 0 8px;
+    }
+
+    &__instructions_item {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .location {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__map {
+      aspect-ratio: 4 / 3;
+      max-width: 100%;
+    }
+
+    &__instructions {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .location {
+    padding: 12px;
+
+    &__container {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+      border-radius: 24px;
+    }
+
+    &__title {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__instructions {
+      gap: 10px;
+    }
+
+    &__instructions_item {
+      width: 100%;
+      border-radius: 12px;
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .location {
+    padding: 8px;
+
+    &__container {
+      padding: 12px;
+      gap: 8px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__instructions_item_title {
+      margin-bottom: 6px;
+    }
   }
 }

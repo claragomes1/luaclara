@@ -8,13 +8,13 @@
   background-color: #f5f0e4;
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #166d6d;
     text-align: center;
   }
 
   &__text {
-    font-size: 1.5rem;
+    font-size: 24px;
     max-width: 850px;
     color: #166d6d;
     text-align: center;
@@ -39,6 +39,40 @@
 
     .img-1 {
       flex-basis: 40%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__text {
+      font-size: 18px;
+      padding: 0px 16px;
+    }
+
+    &__images {
+      .img-1 {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    gap: 12px;
+    padding: 16px 0px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
     }
   }
 }

@@ -2,10 +2,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   background-color: #f5f0e4;
 
+  &__image {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+  }
+
   &__content {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -14,7 +22,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #166d6d;
     text-align: center;
     margin-bottom: 32px;
@@ -22,7 +30,7 @@
 
   &__text {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 24px;
     max-width: 850px;
     color: #166d6d;
     text-align: center;
@@ -32,6 +40,7 @@
   &__infos {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
     margin-bottom: 40px;
   }
@@ -53,12 +62,12 @@
   }
 
   &__info_title {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #166d6d;
   }
 
   &__info_text {
-    font-size: 1rem;
+    font-size: 16px;
     color: #03200b;
   }
 
@@ -91,12 +100,12 @@
 
   &__instruction_title {
     color: #166d6d;
-    font-size: 1.25rem;
+    font-size: 20px;
     padding-bottom: 16px;
   }
 
   &__instruction_text {
-    font-size: 1rem;
+    font-size: 16px;
     color: #03200b;
     padding-bottom: 8px;
   }
@@ -112,12 +121,12 @@
   }
 
   &__contact_title {
-    font-size: 2rem;
+    font-size: 32px;
     color: #166d6d;
   }
 
   &__contact_button {
-    font-size: 1.25rem;
+    font-size: 20px;
     color: #ffffff;
     background-color: #166d6d;
 
@@ -132,10 +141,134 @@
       background-color: #ffffff;
     }
   }
+}
 
-  &__contact_text {
-    font-size: 1.5rem;
+@media (max-width: 1700px) {
+  .dayuse {
+    &__title {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
 
-    color: #166d6d;
+    &__text {
+      font-size: 24px;
+      max-width: 850px;
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      gap: 16px;
+      padding: 64px;
+    }
+
+    &__instruction_item {
+      min-width: auto;
+    }
+  }
+}
+
+@media (max-width: 1355px) {
+  .dayuse {
+    &__title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: 1124px) {
+  .dayuse {
+    &__content {
+      width: 100%;
+      padding: 16px;
+      gap: 12px;
+    }
+
+    &__infos {
+      margin-bottom: 0;
+    }
+
+    &__instructions,
+    &__infos {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__instruction_item,
+    &__info_item {
+      min-width: none;
+      width: 350px;
+    }
+
+    &__contact {
+      margin-top: 4px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .dayuse {
+    flex-direction: column;
+    align-items: center;
+
+    &__image {
+      width: 0;
+      height: 0;
+    }
+
+    &__content {
+      width: 100%;
+      gap: 24px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    &__infos,
+    &__instructions {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__info_item,
+    &__instruction_item {
+      padding: 16px 24px;
+    }
+
+    &__info_title,
+    &__instruction_title {
+      font-size: 16px;
+    }
+
+    &__info_text,
+    &__instruction_text {
+      font-size: 14px;
+    }
+
+    &__instruction_title {
+      padding-bottom: 8px;
+    }
+
+    &__instruction_text {
+      padding-bottom: 4px;
+    }
+
+    &__contact_button {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
   }
 }

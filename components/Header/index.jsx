@@ -4,7 +4,14 @@ import styles from './Header.module.scss';
 function Header() {
   return (
     <header className={styles.header}>
-      <Image src="/logo_luaclara_nova.png" height={110} width={110}></Image>
+      <a href="/">
+        <Image
+          src="/logo_luaclara_nova.png"
+          height={110}
+          width={110}
+          alt="Lua Clara"
+        />
+      </a>
       <nav className={styles.header__nav}>
         <ul className={styles.header__list}>
           <li className={styles.header__item}>

@@ -1,10 +1,9 @@
 import styles from './DayUse.module.scss';
-import Image from 'next/image';
 
 function DayUse() {
   return (
     <div className={styles.dayuse} id="dayuse">
-      <Image src="/img11.jpg" height={1000} width={1000}></Image>
+      <img className={styles.dayuse__image} src="/img11.jpg" />
       <div className={styles.dayuse__content}>
         <div className={styles.dayuse__header}>
           <h3 className={styles.dayuse__title}>

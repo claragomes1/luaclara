@@ -3,4 +3,19 @@
   bottom: 20px;
   right: 20px;
   z-index: 1000;
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .whatsappWidget {
+    &__icon {
+      height: 30px;
+      width: 30px;
+    }
+  }
 }

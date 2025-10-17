@@ -4,7 +4,7 @@
   padding: 40px 20px 0px 20px;
   font-size: 14px;
 
-  .container {
+  &__container {
     max-width: 1200px;
     margin: 0 auto 20px;
     display: grid;
@@ -13,37 +13,37 @@
     align-items: start;
   }
 
-  h3 {
+  &__heading {
     margin: 0 0 8px;
     font-size: 16px;
     font-weight: 600;
   }
 
-  .block {
+  &__block {
     line-height: 1.6;
   }
 
-  .link {
+  &__link {
     display: block;
     color: #fff;
     text-decoration: none;
     margin-top: 6px;
   }
 
-  .link:hover {
+  &__link:hover {
     text-decoration: underline;
     opacity: 0.9;
   }
 
-  .address {
+  &__address {
     font-style: normal;
   }
 
-  .text {
+  &__text {
     margin: 0;
   }
 
-  .copy {
+  &__copy {
     text-align: center;
     opacity: 0.85;
     font-size: 13px;
@@ -51,27 +51,33 @@
   }
 }
 
-/* responsivo */
 @media (max-width: 900px) {
   .footer {
-    .container {
+    padding: 16px;
+
+    &__container {
+      gap: 16px;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__heading {
+      margin: 0 0 4px;
     }
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    .container {
+    &__container {
       grid-template-columns: 1fr;
       text-align: center;
 
-      .block {
+      &__block {
         margin-bottom: 12px;
       }
     }
 
-    .copy {
+    &__copy {
       font-size: 12px;
     }
   }

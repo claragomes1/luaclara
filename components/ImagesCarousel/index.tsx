@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import styles from './ImagesCarousel.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -18,16 +19,7 @@ const images = [
 
 export default function ImagesCarousel() {
   return (
-    <div
-      style={{
-        maxWidth: '900px',
-        maxHeight: '600px',
-        margin: '0 auto',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-      }}
-    >
+    <div className={styles.imagesCarousel__wrapper}>
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation
@@ -38,16 +30,10 @@ export default function ImagesCarousel() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <Image
+            <img
+              className={styles.imagesCarousel__img}
               src={image}
               alt={`Foto ${index + 1}`}
-              width={900}
-              height={600}
-              style={{
-                width: '100%',
-                objectFit: 'cover',
-                display: 'block',
-              }}
             />
           </SwiperSlide>
         ))}
