@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 32px 0px;
-  gap: 32px;
+  gap: 16px;
   background-color: #f5f0e4;
 
   &__title {
@@ -22,7 +22,6 @@
     text-align: center;
     line-height: 1.7;
     color: #214e4e;
-    margin-bottom: 32px;
   }
 
   hr {
@@ -72,7 +71,7 @@
 @media (max-width: 1300px) {
   .about {
     gap: 12px;
-    padding: 16px 0px;
+    padding: 24px 0px;
     &__title {
       font-size: 28px;
     }
@@ -97,18 +96,6 @@
       .img-1 {
         flex-basis: 100%;
       }
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  .about {
-    &__title {
-      font-size: 18px;
-    }
-
-    &__text {
-      font-size: 14px;
     }
   }
 }

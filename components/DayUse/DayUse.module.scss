@@ -66,6 +66,7 @@
     align-items: stretch;
     flex-wrap: wrap;
     gap: 16px;
+    min-width: 100%;
   }
 
   &__info_item {
@@ -310,7 +311,7 @@
 @media (max-width: 700px) {
   .dayuse {
     flex-direction: column;
-    padding: 24px 40px;
+    padding: 24px 16px;
 
     &__image {
       display: none;
@@ -333,14 +334,6 @@
       gap: 24px;
     }
 
-    &__title {
-      font-size: 18px;
-    }
-
-    &__text {
-      font-size: 14px;
-    }
-
     &__header {
       padding-bottom: 4px;
     }
@@ -348,18 +341,6 @@
     &__contact_button {
       font-size: 14px;
       padding: 8px 20px;
-    }
-  }
-}
-
-@media (max-width: 390px) {
-  .dayuse {
-    &__title {
-      font-size: 16px;
-    }
-
-    &__contact_button {
-      font-size: 12px;
     }
   }
 }

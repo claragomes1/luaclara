@@ -1,6 +1,6 @@
 .location {
   background-color: #f5f0e4;
-  padding: 16px 280px 64px 280px;
+  padding: 32px 280px 64px 280px;
 
   &__container {
     display: flex;
@@ -108,11 +108,44 @@
     width: 18px;
     height: 18px;
   }
+
+  &__expander_button_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__expand_button {
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #166d6d;
+    font-weight: 700;
+    margin-top: 8px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background-color 0.12s ease;
+    max-width: 140px;
+  }
+
+  &__expand_button:hover {
+    background-color: rgba(22, 109, 109, 0.06);
+  }
+}
+
+.collapsed {
+  max-height: 4.8em;
+  overflow: hidden;
+  position: relative;
+}
+
+.expanded {
+  max-height: none;
 }
 
 @media (max-width: 1550px) {
   .location {
-    padding: 16px 80px 48px;
+    padding: 24px 80px 48px;
 
     &__container {
       padding: 24px;
@@ -131,7 +164,7 @@
 
 @media (max-width: 1300px) {
   .location {
-    padding: 16px 40px 40px;
+    padding: 24px 40px 40px;
 
     &__container {
       gap: 0px;
@@ -181,16 +214,7 @@
 
 @media (max-width: 700px) {
   .location {
-    padding: 8px;
-
-    &__title {
-      font-size: 18px;
-    }
-
-    &__subtitle {
-      font-size: 14px;
-    }
-
+    padding: 24px 8px;
     &__map {
       aspect-ratio: 4 / 3;
       max-width: 100%;
@@ -198,6 +222,10 @@
 
     &__instructions {
       flex-direction: column;
+    }
+
+    &__expand_button {
+      font-size: 12px;
     }
   }
 }

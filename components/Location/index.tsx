@@ -1,7 +1,10 @@
+import React, { useState } from 'react';
 import styles from './Location.module.scss';
 import { MapPin, AlertTriangle, Navigation, Sprout } from 'lucide-react';
 
 export default function Location() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div id="location" className={styles.location}>
       <h2 className={styles.location__title}>
@@ -32,11 +35,16 @@ export default function Location() {
               de Telha, não vire, segue reto sentido Capão Grosso.
             </p>
           </div>
+
           <div className={styles.location__instructions_item}>
             <h4 className={styles.location__instructions_item_title}>
               <MapPin className={styles.location__step_icon} /> Por Lagoa Santa
             </h4>
-            <p className={styles.location__instructions_item_text}>
+            <div
+              className={`${styles.location__instructions_item_text} ${
+                expanded ? styles.expanded : styles.collapsed
+              }`}
+            >
               Segue por Lagoa Santa na MG10 sentido Serra do Cipó, passa São
               José de Almeida, continua na MG10, assim que passar no Condomínio
               Estancia do Cipó, segue mais 01km e vire a direita, próximo ao km
@@ -46,7 +54,16 @@ export default function Location() {
               frente, segue reto, atravessa a ponte e vai até ver a placa rua
               sem saída, vire à esquerda e segue os postes de eucalipto até
               acabar. Depois siga mais 100 metros e chegou.
-            </p>
+            </div>
+            <div className={styles.location__expander_button_container}>
+              <button
+                className={styles.location__expand_button}
+                aria-expanded={expanded}
+                onClick={() => setExpanded(!expanded)}
+              >
+                {expanded ? 'Mostrar menos' : 'Ler mais'}
+              </button>
+            </div>
           </div>
         </div>
       </div>

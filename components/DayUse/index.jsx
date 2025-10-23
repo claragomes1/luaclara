@@ -21,11 +21,10 @@ function DayUse() {
         <div className={styles.dayuse__infos}>
           <div className={styles.dayuse__info_item}>
             <h4 className={styles.dayuse__info_title}>
-              <Clock className={styles.dayuse__info_icon} /> Horário
+              <Clock className={styles.dayuse__info_icon} /> Horários
             </h4>
-            <p className={styles.dayuse__info_text}>
-              Sábado e domingo - 9h às 17h
-            </p>
+            <p className={styles.dayuse__info_text}>Sábado e domingo</p>
+            <p className={styles.dayuse__info_text}>9h às 17h</p>
           </div>
           <div className={styles.dayuse__info_item}>
             <h4 className={styles.dayuse__info_title}>

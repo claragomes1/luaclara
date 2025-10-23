@@ -46,16 +46,41 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (orientation: landscape) and (max-width: 900px) {
   .hero {
-    background-position: 10% 90%;
+    padding-top: 124px;
 
     &__title {
-      font-size: 32px;
+      font-size: 36px;
     }
 
     &__subtitle {
       font-size: 24px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 10px 24px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 124px;
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      border-radius: 30px;
+      padding: 8px 16px;
     }
   }
 }
