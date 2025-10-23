@@ -9,6 +9,7 @@ function Home() {
     <>
       <Hero />
       <DayUse />
+      <Divider />
       <AboutUs />
       <Divider />
       <Location />

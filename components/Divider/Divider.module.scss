@@ -1,43 +1,12 @@
-.divider {
+.waveDivider {
   width: 100%;
-  background-color: #f5f0e4;
-  padding: 24px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  background-color: #f5f0e4; // fundo da página
+  overflow: hidden;
+  line-height: 0; // remove espaços indesejados
 
-.divider::after {
-  content: '';
-  width: 60%;
-  max-width: 600px;
-  height: 3px;
-  border-radius: 4px;
-  background: linear-gradient(
-    90deg,
-    rgba(22, 109, 109, 0.18) 0%,
-    rgba(34, 139, 34, 0.12) 50%,
-    rgba(22, 109, 109, 0.18) 100%
-  );
-  box-shadow: 0 2px 8px rgba(22, 109, 109, 0.06);
-}
-
-@media (max-width: 1000px) {
-  .divider {
-    padding: 20px 0;
-  }
-  .divider::after {
-    width: 75%;
-    height: 3px;
-  }
-}
-
-@media (max-width: 700px) {
-  .divider {
-    padding: 16px 0;
-  }
-  .divider::after {
-    width: 85%;
-    height: 2px;
+  .waveImage {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
