@@ -7,30 +7,49 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
-    padding: 32px;
     background-color: #166d6d;
-    border-radius: 88px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 16px;
+    border-radius: 64px;
+    box-shadow: 0 4px 16px rgba(22, 109, 109, 0.12);
+    padding: 24px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    color: #166d6d;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &__title_icon {
+    height: 1em;
+    width: 1em;
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 40px;
-    color: #f5f0e4;
+    color: #166d6d;
     margin-bottom: 24px;
     text-align: center;
   }
 
   &__map {
     width: 100%;
-    max-width: 900px;
+    max-width: 750px;
     margin: 0 auto 24px;
     aspect-ratio: 16 / 9;
-    background: #eaeaea;
     border-radius: 8px;
     overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(22, 109, 109, 0.1);
+    background: #dfe9e8;
 
     iframe {
       width: 100%;
@@ -44,24 +63,50 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 24px;
   }
 
   &__instructions_item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     background-color: #f5f0e4;
     width: 800px;
-    border-radius: 16px;
-    padding: 14px;
     flex: 1;
+
+    border: 1px solid rgba(22, 109, 109, 0.15);
+    box-shadow: 0 2px 6px rgba(22, 109, 109, 0.08);
+    padding: 18px 20px;
+    border-radius: 20px;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(22, 109, 109, 0.12);
+    }
   }
 
   &__instructions_item_title {
+    font-weight: 600;
     color: #166d6d;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
   }
 
   &__instructions_item_text {
+    color: #214e4e;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  &__step_icon {
     color: #166d6d;
+    opacity: 0.8;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -75,16 +120,16 @@
     }
 
     &__title {
-      font-size: 34px;
+      font-size: 32px;
     }
 
-    &__instructions_item {
-      width: 600px;
+    &__subtitle {
+      font-size: 28px;
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .location {
     padding: 16px 40px 40px;
 
@@ -94,12 +139,12 @@
       border-radius: 48px;
     }
 
-    &__map {
-      margin: 0px;
+    &__title {
+      font-size: 28px;
     }
 
-    &__title {
-      font-size: 32px;
+    &__subtitle {
+      font-size: 16px;
     }
 
     &__instructions {
@@ -111,13 +156,39 @@
       width: 100%;
       padding: 12px;
     }
+
+    &__instructions_item_text {
+      font-size: 14px;
+    }
+
+    &__instructions_item_title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .location {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__subtitle {
+      font-size: 15px;
+    }
   }
 }
 
 @media (max-width: 700px) {
   .location {
+    padding: 8px;
+
     &__title {
-      font-size: 20px;
+      font-size: 18px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
     }
 
     &__map {
@@ -127,53 +198,6 @@
 
     &__instructions {
       flex-direction: column;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .location {
-    padding: 12px;
-
-    &__container {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 16px;
-      border-radius: 24px;
-    }
-
-    &__title {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    &__instructions {
-      gap: 10px;
-    }
-
-    &__instructions_item {
-      width: 100%;
-      border-radius: 12px;
-      padding: 10px;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .location {
-    padding: 8px;
-
-    &__container {
-      padding: 12px;
-      gap: 8px;
-    }
-
-    &__title {
-      font-size: 20px;
-    }
-
-    &__instructions_item_title {
-      margin-bottom: 6px;
     }
   }
 }

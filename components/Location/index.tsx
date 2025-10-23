@@ -1,12 +1,17 @@
 import styles from './Location.module.scss';
+import { MapPin, AlertTriangle, Navigation, Sprout } from 'lucide-react';
 
 export default function Location() {
   return (
     <div id="location" className={styles.location}>
+      <h2 className={styles.location__title}>
+        <Sprout className={styles.location__title_icon} /> Como chegar{' '}
+        <Sprout className={styles.location__title_icon} />
+      </h2>
+      <h1 className={styles.location__subtitle}>
+        Vale do Vento - Espaço Lua Clara
+      </h1>
       <div className={styles.location__container}>
-        <h1 className={styles.location__title}>
-          📍 Como chegar no Vale do Vento - Espaço Lua Clara
-        </h1>
         <div className={styles.location__map}>
           <iframe
             className={styles.mapIframe}
@@ -19,19 +24,20 @@ export default function Location() {
         <div className={styles.location__instructions}>
           <div className={styles.location__instructions_item}>
             <h4 className={styles.location__instructions_item_title}>
-              ♦️ Por Jaboticatubas
+              <MapPin className={styles.location__step_icon} /> Por
+              Jaboticatubas
             </h4>
             <p className={styles.location__instructions_item_text}>
-              ⚠️ Segue o GPS, observe apenas quando mandar virar a direita pra
-              Casa de Telha, não vire, segue reto sentido Capão Grosso.
+              Segue o GPS, observe apenas quando mandar virar a direita pra Casa
+              de Telha, não vire, segue reto sentido Capão Grosso.
             </p>
           </div>
           <div className={styles.location__instructions_item}>
             <h4 className={styles.location__instructions_item_title}>
-              ♦️ Por Lagoa Santa
+              <MapPin className={styles.location__step_icon} /> Por Lagoa Santa
             </h4>
             <p className={styles.location__instructions_item_text}>
-              ⚠️ Segue por Lagoa Santa na MG10 sentido Serra do Cipó, passa São
+              Segue por Lagoa Santa na MG10 sentido Serra do Cipó, passa São
               José de Almeida, continua na MG10, assim que passar no Condomínio
               Estancia do Cipó, segue mais 01km e vire a direita, próximo ao km
               86, na estrada de terra a direita tem uma placa São José da Serra,

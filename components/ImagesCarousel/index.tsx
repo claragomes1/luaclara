@@ -15,6 +15,7 @@ const images = [
   '/img11.jpg',
   '/img12.jpg',
   '/img13.jpg',
+  '/img16.jpg',
 ];
 
 export default function ImagesCarousel() {

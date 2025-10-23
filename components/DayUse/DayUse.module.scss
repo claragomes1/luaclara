@@ -1,48 +1,71 @@
 .dayuse {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
   background-color: #f5f0e4;
+  padding: 64px 40px 32px 40px;
+  gap: 64px;
 
   &__image {
-    width: 50%;
-    height: 100vh;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: 80vh;
+    max-height: 80vh;
     object-fit: cover;
     display: block;
+    border-radius: 40px;
+    transition:
+      flex-basis 0.32s ease,
+      max-width 0.32s ease,
+      height 0.32s ease,
+      transform 0.32s ease;
+  }
+
+  &__image_mobile {
+    display: none;
   }
 
   &__content {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    padding: 64px;
+    gap: 40px;
+  }
+
+  &__header {
+    padding-bottom: 32px;
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 36px;
+    margin: 0 0 18px;
     color: #166d6d;
+    letter-spacing: 0.2px;
     text-align: center;
-    margin-bottom: 32px;
   }
 
   &__text {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     max-width: 850px;
-    color: #166d6d;
     text-align: center;
-    margin-bottom: 40px;
+    line-height: 1.7;
+    color: #214e4e;
+    margin: 0;
   }
 
-  &__infos {
+  &__infos,
+  &__instructions {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 40px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   &__info_item {
@@ -51,57 +74,58 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 24px 32px;
-    gap: 8px;
-    min-width: 220px;
+    padding: 18px 20px;
+    min-width: 120px;
+    flex: 1 1 120px;
 
     background-color: #ffffff;
     border: 1px solid #d6d2c4;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(22, 109, 109, 0.08);
+    box-shadow: 0 6px 8px rgba(22, 109, 109, 0.08);
   }
 
   &__info_title {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
     color: #166d6d;
+    font-weight: 700;
+    margin-bottom: 6px;
   }
 
   &__info_text {
     font-size: 16px;
     color: #03200b;
-  }
-
-  &__instructions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    margin: 0;
   }
 
   &__instruction_item {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex: 1 1 220px;
     gap: 8px;
-    min-width: 400px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(22, 109, 109, 0.08);
     background-color: #ffffff;
-    padding: 24px 32px;
+    border: 1px solid #e6e2d8;
   }
 
   .included {
-    border: 2px solid #94c1b4;
+    border-left: 6px solid #94c1b4;
   }
 
   .not_included {
-    border: 2px solid #e3a8a8;
+    border-left: 6px solid #e3a8a8;
   }
 
   &__instruction_title {
     color: #166d6d;
-    font-size: 20px;
-    padding-bottom: 16px;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
   }
 
   &__instruction_text {
@@ -112,102 +136,173 @@
 
   &__contact {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-top: 40px;
-    gap: 40px;
-  }
-
-  &__contact_title {
-    font-size: 32px;
-    color: #166d6d;
+    margin-top: 8px;
   }
 
   &__contact_button {
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #166d6d;
-
-    padding: 12px 24px;
-    border-radius: 22px;
+    display: inline-block;
+    background: linear-gradient(90deg, #166d6d, #1f8f8f);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
     text-decoration: none;
-    border: 2px solid #166d6d;
-    transition: background-color 0.3s;
+    font-weight: 700;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease;
+    box-shadow: 0 8px 20px rgba(22, 109, 109, 0.12);
+  }
 
-    &:hover {
-      color: #166d6d;
-      background-color: #ffffff;
+  &__contact_button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(22, 109, 109, 0.16);
+  }
+
+  &__contact_button:active {
+    transform: translateY(-1px);
+  }
+
+  .dayuse__list_icon,
+  .dayuse__list_icon_not {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 1.05em;
+    height: 1.05em;
+  }
+
+  .dayuse__list_icon {
+    color: #2f9d6f;
+  }
+
+  .dayuse__list_icon_not {
+    color: #e35c5c;
+  }
+
+  .dayuse__info_icon,
+  .dayuse__icon {
+    vertical-align: middle;
+    color: #166d6d;
+    width: 1.15em;
+    height: 1.15em;
+  }
+
+  @media (max-width: 1550px) {
+    .dayuse {
+      &__image {
+        flex-basis: 42%;
+        max-width: 42%;
+        height: 66vh;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .dayuse {
+      &__image {
+        flex-basis: 38%;
+        max-width: 45%;
+        height: 50vh;
+      }
     }
   }
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1550px) {
   .dayuse {
     &__title {
-      font-weight: 700;
       font-size: 32px;
-      margin-bottom: 32px;
     }
 
     &__text {
-      font-size: 24px;
-      max-width: 850px;
-      margin-bottom: 40px;
+      font-size: 18px;
     }
+  }
+}
 
+@media (max-width: 1300px) {
+  .dayuse {
     &__content {
       gap: 16px;
-      padding: 64px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__header {
+      padding-bottom: 12px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .dayuse {
+    &__content {
+      gap: 8px;
+    }
+
+    &__header {
+      padding-bottom: 12px;
+    }
+
+    &__title {
+      gap: 4px;
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__infos,
+    &__instructions {
+      gap: 8px;
+    }
+
+    &__info_item {
+      padding: 8px 12px;
+    }
+
+    &__info_title {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    &__info_text {
+      font-size: 12px;
     }
 
     &__instruction_item {
-      min-width: auto;
-    }
-  }
-}
-
-@media (max-width: 1355px) {
-  .dayuse {
-    &__title {
-      font-size: 28px;
-      margin-bottom: 24px;
+      gap: 6px;
+      padding: 12px;
     }
 
-    &__text {
-      font-size: 20px;
-      margin-bottom: 32px;
-    }
-  }
-}
-
-@media (max-width: 1124px) {
-  .dayuse {
-    &__content {
-      width: 100%;
-      padding: 16px;
-      gap: 12px;
+    &__instruction_title {
+      font-size: 13px;
+      margin-bottom: 4px;
     }
 
-    &__infos {
-      margin-bottom: 0;
-    }
-
-    &__instructions,
-    &__infos {
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    &__instruction_item,
-    &__info_item {
-      min-width: none;
-      width: 350px;
+    &__instruction_text {
+      font-size: 12px;
+      padding-bottom: 4px;
     }
 
     &__contact {
       margin-top: 4px;
+    }
+
+    &__contact_button {
+      font-size: 16px;
+      padding: 8px 20px;
     }
   }
 }
@@ -215,60 +310,56 @@
 @media (max-width: 700px) {
   .dayuse {
     flex-direction: column;
-    align-items: center;
+    padding: 24px 40px;
 
     &__image {
-      width: 0;
-      height: 0;
+      display: none;
+    }
+
+    &__image_mobile {
+      display: block;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      max-height: 200px;
+      width: 300px;
+      border-radius: 20px;
     }
 
     &__content {
+      align-items: center;
+      justify-content: center;
       width: 100%;
       gap: 24px;
     }
 
     &__title {
-      font-size: 20px;
-      margin-bottom: 20px;
+      font-size: 18px;
     }
 
     &__text {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    &__infos,
-    &__instructions {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    &__info_item,
-    &__instruction_item {
-      padding: 16px 24px;
-    }
-
-    &__info_title,
-    &__instruction_title {
-      font-size: 16px;
-    }
-
-    &__info_text,
-    &__instruction_text {
       font-size: 14px;
     }
 
-    &__instruction_title {
-      padding-bottom: 8px;
-    }
-
-    &__instruction_text {
+    &__header {
       padding-bottom: 4px;
     }
 
     &__contact_button {
-      font-size: 16px;
+      font-size: 14px;
       padding: 8px 20px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .dayuse {
+    &__title {
+      font-size: 16px;
+    }
+
+    &__contact_button {
+      font-size: 12px;
     }
   }
 }

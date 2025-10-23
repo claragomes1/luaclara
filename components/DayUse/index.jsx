@@ -1,4 +1,5 @@
 import styles from './DayUse.module.scss';
+import { Sprout, Clock, Tag, Check, X } from 'lucide-react';
 
 function DayUse() {
   return (
@@ -7,7 +8,8 @@ function DayUse() {
       <div className={styles.dayuse__content}>
         <div className={styles.dayuse__header}>
           <h3 className={styles.dayuse__title}>
-            🌿 Day Use no Espaço Lua Clara 🌿
+            <Sprout className={styles.dayuse__icon} /> Day Use no Espaço Lua
+            Clara <Sprout className={styles.dayuse__icon} />
           </h3>
           <p className={styles.dayuse__text}>
             Venha aproveitar um dia de descanso e conexão com a natureza em
@@ -15,13 +17,20 @@ function DayUse() {
             energias.
           </p>
         </div>
+        <img className={styles.dayuse__image_mobile} src="/img3.png" />
         <div className={styles.dayuse__infos}>
           <div className={styles.dayuse__info_item}>
-            <h4 className={styles.dayuse__info_title}>🕘 Horário</h4>
-            <p className={styles.dayuse__info_text}>Das 9h às 17h</p>
+            <h4 className={styles.dayuse__info_title}>
+              <Clock className={styles.dayuse__info_icon} /> Horário
+            </h4>
+            <p className={styles.dayuse__info_text}>
+              Sábado e domingo - 9h às 17h
+            </p>
           </div>
           <div className={styles.dayuse__info_item}>
-            <h4 className={styles.dayuse__info_title}>💰 Valor</h4>
+            <h4 className={styles.dayuse__info_title}>
+              <Tag className={styles.dayuse__info_icon} /> Valor
+            </h4>
             <p className={styles.dayuse__info_text}>R$ 50 por pessoa</p>
           </div>
         </div>
@@ -30,17 +39,20 @@ function DayUse() {
             className={`${styles.dayuse__instruction_item} ${styles.included}`}
           >
             <h4 className={styles.dayuse__instruction_title}>
-              🟩 O que está incluso:
+              O que está incluso:
             </h4>
             <ul>
               <li className={styles.dayuse__instruction_text}>
-                ✔️ Acesso à piscina e área externa
+                <Check className={styles.dayuse__list_icon} /> Acesso à piscina
+                e área externa
               </li>
               <li className={styles.dayuse__instruction_text}>
-                ✔️ Banheiros e duchas
+                <Check className={styles.dayuse__list_icon} /> Banheiros e
+                duchas
               </li>
               <li className={styles.dayuse__instruction_text}>
-                ✔️ Mesas, cadeiras e churrasqueira
+                <Check className={styles.dayuse__list_icon} /> Mesas, cadeiras e
+                churrasqueira
               </li>
             </ul>
           </div>
@@ -48,17 +60,18 @@ function DayUse() {
             className={`${styles.dayuse__instruction_item} ${styles.not_included}`}
           >
             <h4 className={styles.dayuse__instruction_title}>
-              🟥 O que não está incluso:
+              O que não está incluso:
             </h4>
             <ul>
               <li className={styles.dayuse__instruction_text}>
-                ❌ Alimentação{' '}
+                <X className={styles.dayuse__list_icon_not} /> Alimentação
               </li>
               <li className={styles.dayuse__instruction_text}>
-                ❌ Acesso aos chalés
+                <X className={styles.dayuse__list_icon_not} /> Acesso aos chalés
               </li>
               <li className={styles.dayuse__instruction_text}>
-                ❌ Bebidas (traga seu cooler)
+                <X className={styles.dayuse__list_icon_not} /> Bebidas (traga
+                seu cooler)
               </li>
             </ul>
           </div>
