@@ -44,6 +44,20 @@
   }
 }
 
+@media (max-width: 500px) {
+  .imagesCarousel {
+    &__img {
+      width: 350px;
+      height: 250px;
+    }
+
+    &__wrapper {
+      max-width: 350px;
+      max-height: 250px;
+    }
+  }
+}
+
 @media (max-width: 400px) {
   .imagesCarousel {
     &__img {
