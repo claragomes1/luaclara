@@ -101,6 +101,13 @@
     margin: 0;
   }
 
+  &__info_text_small {
+    font-size: 13px;
+    color: #5b5b5b;
+    margin: 0;
+    font-style: italic;
+  }
+
   &__instruction_item {
     display: flex;
     flex-wrap: wrap;
@@ -282,6 +289,10 @@
       font-size: 12px;
     }
 
+    &__info_text_small {
+      font-size: 11px;
+    }
+
     &__instruction_item {
       gap: 6px;
       padding: 12px;
@@ -341,6 +352,10 @@
     &__contact_button {
       font-size: 14px;
       padding: 8px 20px;
+    }
+
+    &__info_text_small {
+      font-size: 10px;
     }
   }
 }

@@ -4,7 +4,7 @@ function WhatsappWidget() {
   return (
     <div className={styles.whatsappWidget}>
       <a
-        href="https://wa.me/5531984065434"
+        href="https://wa.me/5531996295388?text=Olá, vim pelo site"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"

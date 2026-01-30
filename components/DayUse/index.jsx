@@ -1,5 +1,5 @@
 import styles from './DayUse.module.scss';
-import { Sprout, Clock, Tag, Check, X } from 'lucide-react';
+import { Sprout, Clock, Tag, Check } from 'lucide-react';
 
 function DayUse() {
   return (
@@ -24,13 +24,16 @@ function DayUse() {
               <Clock className={styles.dayuse__info_icon} /> Horários
             </h4>
             <p className={styles.dayuse__info_text}>Sábado e domingo</p>
-            <p className={styles.dayuse__info_text}>9h às 17h</p>
+            <p className={styles.dayuse__info_text}>9h às 16h</p>
           </div>
           <div className={styles.dayuse__info_item}>
             <h4 className={styles.dayuse__info_title}>
               <Tag className={styles.dayuse__info_icon} /> Valor
             </h4>
-            <p className={styles.dayuse__info_text}>R$ 50 por pessoa</p>
+            <p className={styles.dayuse__info_text}>R$ 69,00 por pessoa</p>
+            <p className={styles.dayuse__info_text_small}>
+              * Condições especiais para crianças até 10 anos
+            </p>
           </div>
         </div>
         <div className={styles.dayuse__instructions}>
@@ -42,42 +45,67 @@ function DayUse() {
             </h4>
             <ul>
               <li className={styles.dayuse__instruction_text}>
-                <Check className={styles.dayuse__list_icon} /> Acesso à piscina
-                e área externa
+                <Check className={styles.dayuse__list_icon} /> Piscina natural
+                com cascata
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Jacuzzi integrada
+                ao ambiente natural
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Área verde ampla
+                para descanso
               </li>
               <li className={styles.dayuse__instruction_text}>
                 <Check className={styles.dayuse__list_icon} /> Banheiros e
                 duchas
               </li>
               <li className={styles.dayuse__instruction_text}>
-                <Check className={styles.dayuse__list_icon} /> Mesas, cadeiras e
-                churrasqueira
+                <Check className={styles.dayuse__list_icon} /> 10 churrasqueiras
+                (uso por ordem de chegada)
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Mesas e cadeiras
               </li>
             </ul>
           </div>
           <div
-            className={`${styles.dayuse__instruction_item} ${styles.not_included}`}
+            className={`${styles.dayuse__instruction_item} ${styles.included}`}
           >
             <h4 className={styles.dayuse__instruction_title}>
-              O que não está incluso:
+              Regras do espaço:
             </h4>
             <ul>
               <li className={styles.dayuse__instruction_text}>
-                <X className={styles.dayuse__list_icon_not} /> Alimentação
+                <Check className={styles.dayuse__list_icon} /> Permitido levar
+                cooler
               </li>
               <li className={styles.dayuse__instruction_text}>
-                <X className={styles.dayuse__list_icon_not} /> Acesso aos chalés
+                <Check className={styles.dayuse__list_icon} /> Pet permitido
+                (não entra na piscina/Jacuzzi)
               </li>
               <li className={styles.dayuse__instruction_text}>
-                <X className={styles.dayuse__list_icon_not} /> Bebidas (traga
-                seu cooler)
+                <Check className={styles.dayuse__list_icon} /> Apenas som
+                ambiente
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Crianças devem
+                estar sempre acompanhadas
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Não há estrutura
+                específica para crianças pequenas
+              </li>
+              <li className={styles.dayuse__instruction_text}>
+                <Check className={styles.dayuse__list_icon} /> Sem bar ou
+                restaurante
               </li>
             </ul>
           </div>
         </div>
         <div className={styles.dayuse__contact}>
           <a
-            href="https://wa.me/5531984065434"
+            href="https://wa.me/5531996295388?text=Olá, vim pelo site"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.dayuse__contact_button}

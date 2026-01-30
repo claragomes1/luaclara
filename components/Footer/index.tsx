@@ -6,8 +6,8 @@ export default function Footer() {
       <div className={styles.footer__container}>
         <div className={styles.footer__block}>
           <h3 className={styles.footer__heading}>Contato</h3>
-          <a href="tel:+31984065434" className={styles.footer__link}>
-            +55 (31) 98406-5434
+          <a href="tel:+319996295388" className={styles.footer__link}>
+            +55 (31) 9 99629-5388
           </a>
           <a
             href="mailto:espacoluaclara@gmail.com"
@@ -29,9 +29,9 @@ export default function Footer() {
         <div className={styles.footer__block}>
           <h3 className={styles.footer__heading}>Horários</h3>
           <p className={styles.footer__text}>
-            Sáb: 9h — 17h
+            Sáb: 9h — 16h
             <br />
-            Dom: 9h - 17h
+            Dom: 9h - 16h
           </p>
         </div>
 
