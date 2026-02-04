@@ -20,7 +20,7 @@ export default function Footer() {
         <div className={styles.footer__block}>
           <h3 className={styles.footer__heading}>Endereço</h3>
           <address className={styles.footer__address}>
-            Rua Flor do Serrado - Vale do Vento
+            Rua Flor do Cerrado - Vale do Vento
             <br />
             São José da Serra, Jaboticatubas - MG
           </address>

@@ -7,7 +7,7 @@ function Hero() {
         Conheça esse paraíso - Espaço Lua Clara
       </h1>
       <h3 className={styles.hero__subtitle}>
-        Aconchego, conforto, boas energias e alto astral
+        Onde o tempo desacelera e a Serra abraça!
       </h3>
       <a className={styles.hero__btn} href="#dayuse">
         Saiba mais

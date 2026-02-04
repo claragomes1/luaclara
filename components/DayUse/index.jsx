@@ -49,7 +49,7 @@ function DayUse() {
                 com cascata
               </li>
               <li className={styles.dayuse__instruction_text}>
-                <Check className={styles.dayuse__list_icon} /> Jacuzzi integrada
+                <Check className={styles.dayuse__list_icon} /> Ofurô integrada
                 ao ambiente natural
               </li>
               <li className={styles.dayuse__instruction_text}>
@@ -61,11 +61,12 @@ function DayUse() {
                 duchas
               </li>
               <li className={styles.dayuse__instruction_text}>
-                <Check className={styles.dayuse__list_icon} /> 10 churrasqueiras
+                <Check className={styles.dayuse__list_icon} /> Churrasqueiras
                 (uso por ordem de chegada)
               </li>
               <li className={styles.dayuse__instruction_text}>
                 <Check className={styles.dayuse__list_icon} /> Mesas e cadeiras
+                (uso por ordem de chegada)
               </li>
             </ul>
           </div>
@@ -82,7 +83,7 @@ function DayUse() {
               </li>
               <li className={styles.dayuse__instruction_text}>
                 <Check className={styles.dayuse__list_icon} /> Pet permitido
-                (não entra na piscina/Jacuzzi)
+                (não entra na piscina/ofurô)
               </li>
               <li className={styles.dayuse__instruction_text}>
                 <Check className={styles.dayuse__list_icon} /> Apenas som
