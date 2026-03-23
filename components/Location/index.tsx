@@ -12,7 +12,7 @@ export default function Location() {
         <Sprout className={styles.location__title_icon} />
       </h2>
       <h1 className={styles.location__subtitle}>
-        Vale do Vento - Espaço Lua Clara
+        São José da Serra - Espaço Lua Clara
       </h1>
       <div className={styles.location__container}>
         <div className={styles.location__map}>
@@ -52,8 +52,9 @@ export default function Location() {
               segue 11km reto, assim que chegar no Vilarejo vc vai ver um muro
               de eucalipto, tem uma Arara grande na chegada, vire a esquerda em
               frente, segue reto, atravessa a ponte e vai até ver a placa rua
-              sem saída, vire à esquerda e segue os postes de eucalipto até
-              acabar. Depois siga mais 100 metros e chegou.
+              sem saída, vire à esquerda seguindo a placa Rua Flor do Cerrado e
+              segue os postes de eucalipto até acabar. Depois siga mais 100
+              metros e chegou.
             </div>
             <div className={styles.location__expander_button_container}>
               <button
